@@ -19,3 +19,4 @@ below.</p>
     <input type="submit" value="Return">
 </form>
 
+<%@ include file="/includes/footer.jsp" %>

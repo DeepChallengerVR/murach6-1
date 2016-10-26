@@ -4,6 +4,7 @@
 <p>To join our email list, enter your name and
    email address below.</p>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:if test="${message != null}">
     <p><i>${message}</i></p>
 </c:if>
