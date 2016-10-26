@@ -1,12 +1,14 @@
 package murach.email;
 
 import java.io.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
 import murach.business.User;
 import murach.data.UserDB;
-
+//erik borchers
 public class EmailListServlet extends HttpServlet {
 
     @Override
@@ -14,6 +16,11 @@ public class EmailListServlet extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
         String url = "/index.html";
+        
+        // initialize the current year that's used in the copyright notice
+        GregorianCalendar currentDate = new GregorianCalendar();
+        int currentYear = currentDate.get(Calendar.YEAR);
+        request.setAttribute("currentYear", currentYear);
         
         // get current action
         String action = request.getParameter("action");
